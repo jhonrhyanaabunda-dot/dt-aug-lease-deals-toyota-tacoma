@@ -1312,6 +1312,17 @@
 
   /* July parity: deck spans the wrap at July's computed metrics (17px/1.7, no cap) */
   .hero .deck { font-size: 17px; line-height: 1.7; max-width: none; margin: 0 0 20px; }
+
+  /* Breadcrumb bar (April design system, matching the July articles) */
+  .breadcrumb-bar{font-size:12px}
+  .breadcrumb-bar nav{max-width:var(--maxw);margin:0 auto;padding:12px 32px 28px}
+  .breadcrumb-bar ol{list-style:none;display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:0;padding:0}
+  .breadcrumb-bar li{display:inline-flex;align-items:center;gap:10px;letter-spacing:.04em}
+  .breadcrumb-bar li:not(:last-child)::after{content:"\203A";color:var(--muted);font-size:14px;line-height:1}
+  .breadcrumb-bar a{color:var(--ink-soft);text-decoration:none;text-underline-offset:3px}
+  .breadcrumb-bar a:hover{color:var(--red);text-decoration:underline}
+  .breadcrumb-bar [aria-current="page"]{color:var(--ink);font-weight:500}
+  @media (max-width:640px){.breadcrumb-bar nav{padding:8px 20px 18px}.breadcrumb-bar{font-size:11px}}
 </style>
 </head>
 <body>
@@ -1351,6 +1362,17 @@
     <figcaption class="visually-hidden">A Toyota Tacoma on the lot at Dalton Toyota National City, 2400 National City Blvd on the National City Mile of Cars, available to lease or finance.</figcaption>
   </figure>
 </header>
+<!-- Breadcrumb bar (matching the July articles) -->
+<div class="breadcrumb-bar">
+ <nav aria-label="Breadcrumb">
+  <ol>
+   <li><a href="https://www.toyotadalton.com/">Home</a></li>
+   <li><a href="https://www.toyotadalton.com/searchnew.aspx">New Inventory</a></li>
+   <li><span aria-current="page">Tacoma Lease Deals</span></li>
+  </ol>
+ </nav>
+</div>
+
 
 <!-- ARTICLE BODY -->
 <main class="wrap" id="main-content">
@@ -1406,6 +1428,13 @@
         <div class="section-num"><span>02</span><span>The truck</span></div>
         <h2 class="section-h">What you're leasing: the <em>2025–2026 Tacoma</em>.</h2>
         <p class="lede">The Tacoma was fully redesigned for the 2024 model year, and the truck on our lot today rides on Toyota's TNGA-F global truck platform, the same architecture under the Tundra and Sequoia. That matters for a lease, because the warranty you lean on for two or three years is covering a newer, stiffer, more capable truck than the generation it replaced.</p>
+        <figure class="section-image" style="margin:32px 0 28px;position:relative;">
+          <div class="frame" style="aspect-ratio:auto;border:none;background:transparent;max-height:60vh;overflow:hidden;border-radius:12px;">
+            <img src="lot-tacoma-front.webp" width="1600" height="1200" alt="A Toyota Tacoma parked under the canopy on the Dalton Toyota National City lot, front view." loading="lazy" decoding="async" style="width:100%;height:56vh;display:block;object-fit:cover;object-position:center 45%;">
+          </div>
+          <figcaption style="margin-top:10px;font-size:13px;line-height:1.5;color:var(--muted);text-align:left;max-width:70ch;">A Tacoma on our National City lot. Trims and colors move quickly, so we confirm what is in stock on the day you shop.</figcaption>
+        </figure>
+
 <figure class="dealer-clip">
           <div class="frame">
             <video controls playsinline preload="metadata" aria-label="Toyota Tacoma at Dalton Toyota National City">
@@ -1485,6 +1514,13 @@
         <div class="section-num"><span>04</span><span>The fine print</span></div>
         <h2 class="section-h">What a lease covers, <em>and what it doesn't</em>.</h2>
         <p class="lede">Most lease disappointment comes from the fine print nobody walks you through. We do it before you sign, not after you turn the truck in. Here's the plain-English version of what lives inside a Tacoma lease.</p>
+        <figure class="section-image" style="margin:32px 0 28px;position:relative;">
+          <div class="frame" style="aspect-ratio:auto;border:none;background:transparent;max-height:60vh;overflow:hidden;border-radius:12px;">
+            <img src="96.webp" width="1600" height="900" alt="A Toyota Tacoma towing a boat, showing the truck set up for weekend hauling." loading="lazy" decoding="async" style="width:100%;height:56vh;display:block;object-fit:cover;object-position:center 45%;">
+          </div>
+          <figcaption style="margin-top:10px;font-size:13px;line-height:1.5;color:var(--muted);text-align:left;max-width:70ch;">Towing is where a Tacoma earns its keep. Payload and tow ratings shift by configuration, so we check them against your VIN.</figcaption>
+        </figure>
+
 
         <ul class="bullets">
           <li><strong>Factory warranty for the full term.</strong> A 24-to-39-month lease sits comfortably inside Toyota's new-vehicle warranty, so covered repairs aren't your problem. That's a real part of why leasing feels low-risk on a truck you intend to work.</li>
@@ -1561,6 +1597,13 @@
         <div class="section-num"><span>06</span><span>Reliability &amp; safety</span></div>
         <h2 class="section-h">Reliability and safety: <em>why the lease risk is low</em>.</h2>
         <p class="lede">One reason a Tacoma lease feels safe is the truck's track record. We verified the current safety picture ourselves rather than quoting marketing copy.</p>
+        <figure class="section-image" style="margin:32px 0 28px;position:relative;">
+          <div class="frame" style="aspect-ratio:auto;border:none;background:transparent;max-height:60vh;overflow:hidden;border-radius:12px;">
+            <img src="body-tacoma-trd.webp" width="1280" height="799" alt="A Toyota Tacoma TRD on a rocky off-road trail, showing its ground clearance and all-terrain stance." loading="lazy" decoding="async" style="width:100%;height:56vh;display:block;object-fit:cover;object-position:center 45%;">
+          </div>
+          <figcaption style="margin-top:10px;font-size:13px;line-height:1.5;color:var(--muted);text-align:left;max-width:70ch;">The TRD grades are built for the trail. Most lease customers never take one this far, but the underlying truck is the same.</figcaption>
+        </figure>
+
 
         <h3>We run the VIN before we hand over the keys</h3>
         <p>The Insurance Institute for Highway Safety publishes Tacoma crash-test results at <a href="https://www.iihs.org" rel="noopener" target="_blank">iihs.org</a>, and the National Highway Traffic Safety Administration posts federal star ratings and any open recalls at <a href="https://www.nhtsa.gov" rel="noopener" target="_blank">nhtsa.gov</a>. Before we hand a leased Tacoma to a customer, our service team runs the VIN through NHTSA's recall lookup to confirm there are no open campaigns, that's a five-minute check that protects you for the entire term.</p>
@@ -1810,6 +1853,13 @@
 <!-- Sources -->
 <section class="sources" id="sources">
   <div class="wrap">
+      <div class="author-credit" style="margin:12px 0 36px;padding-top:28px;border-top:1px solid var(--rule);max-width:680px">
+        <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Reviewed by</div>
+        <div style="font-family:var(--display);font-size:26px;font-weight:800;letter-spacing:-.01em;line-height:1.1;color:var(--ink)"><a href="https://www.toyotadalton.com/staff.aspx" style="color:inherit;text-decoration:none">Monica Salem</a></div>
+        <div style="font-size:15px;font-weight:600;color:var(--red-deep,#0a2a52);margin:4px 0 16px">Marketing Director, Dalton Auto Group</div>
+        <p style="font-size:16px;line-height:1.65;color:var(--ink-soft);margin:0 0 16px;max-width:60ch">Monica leads marketing for the Dalton Auto Group in National City, CA, with roughly 27 years in automotive marketing. She reviews Dalton Toyota vehicle, pricing, and dealership content for accuracy against the store's own site, Toyota's published information, and independent sources (EPA, NHTSA, IIHS) before it is published.</p>
+      </div>
+
     <div class="article-grid" style="padding-top:0;">
       <div></div>
       <div class="body">
