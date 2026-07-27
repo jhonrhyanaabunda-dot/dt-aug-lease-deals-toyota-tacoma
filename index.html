@@ -1323,6 +1323,11 @@
   .breadcrumb-bar a:hover{color:var(--red);text-decoration:underline}
   .breadcrumb-bar [aria-current="page"]{color:var(--ink);font-weight:500}
   @media (max-width:640px){.breadcrumb-bar nav{padding:8px 20px 18px}.breadcrumb-bar{font-size:11px}}
+
+  /* Center the spec-strip stat numbers without the .stats full-bleed margins */
+  .spec-strip.centered .item{align-items:center;text-align:center}
+  .spec-strip.centered .num{text-align:center}
+  .spec-strip.centered .lbl{justify-content:center;text-align:center}
 </style>
 </head>
 <body>
@@ -1401,8 +1406,6 @@
       <section class="s" id="why-lease">
         <div class="section-num"><span>01</span><span>From the sales floor</span></div>
         <h2 class="section-h">Why lease a Toyota Tacoma <em>in National City</em>.</h2>
-
-
         <p class="lede">The Tacoma is built for the way Southern California drives, the I-5 and 805 grind into downtown San Diego, the run east toward the trailheads, the weekend pull out to the desert. It's a mid-size truck that earns its keep, which is why so many National City drivers want a newer one in the driveway without committing to a decade of ownership.</p>
         <p>Leasing solves a specific problem: it keeps you in a current-generation Tacoma with a predictable monthly payment and full factory warranty coverage for the entire term. You're paying for the years you drive the truck hardest, not for the long tail of ownership where repair bills creep in. <em>Reviewed and posted by the Dalton Toyota National City sales and finance team.</em></p>
 
@@ -1435,16 +1438,7 @@
           <figcaption style="margin-top:10px;font-size:13px;line-height:1.5;color:var(--muted);text-align:left;max-width:70ch;">A Tacoma on our National City lot. Trims and colors move quickly, so we confirm what is in stock on the day you shop.</figcaption>
         </figure>
 
-<figure class="dealer-clip">
-          <div class="frame">
-            <video controls playsinline preload="metadata" aria-label="Toyota Tacoma at Dalton Toyota National City">
-              <source src="dealer-clip.mp4" type="video/mp4">
-            </video>
-          </div>
-          <figcaption>A Toyota Tacoma on the lot at Dalton Toyota National City.</figcaption>
-        </figure>
-
-        <div class="trims">
+<div class="trims">
           <article class="trim flagship">
             <div class="engine-row"><span class="engine">Engine</span><span class="badge">i-FORCE turbo</span></div>
             <h4 class="name">2.4L turbo four replaced the V6</h4>
@@ -1471,7 +1465,7 @@
         <h3>The spec sheet, pulled from Toyota, not sales-floor memory</h3>
         <p>EPA estimates for the non-hybrid Tacoma land in the low-to-mid 20s mpg combined depending on drivetrain, per <a href="https://www.fueleconomy.gov" rel="noopener" target="_blank">fueleconomy.gov</a>. The i-FORCE MAX hybrid trades some efficiency for torque, so if your commute matters more than your tow weight, that's a conversation to have before you pick a trim. Here are the numbers worth knowing before you sign a Tacoma lease:</p>
 
-        <div class="spec-strip">
+        <div class="spec-strip centered">
           <div class="item"><div class="num">278<small> hp</small></div><div class="lbl">Standard i-FORCE turbo four output</div></div>
           <div class="item"><div class="num">326<small> hp</small></div><div class="lbl">Available i-FORCE MAX hybrid output</div></div>
           <div class="item"><div class="num">6,500<small> lbs</small></div><div class="lbl">Max tow rating properly equipped</div></div>
@@ -1480,6 +1474,15 @@
 
         <h3>Trim and configuration drive the payment</h3>
         <p>This is the part most lease ads skip: an SR5 Double Cab 4x2 and a TRD Off-Road 4x4 are different trucks at different payments, and the same advertised "Tacoma lease" headline rarely applies to both. When you tell us how you use the truck, daily commuter, weekend overlander, job-site hauler, we match you to the configuration that hits your target payment instead of upselling you into a trim you'll resent at month three.</p>
+
+        <figure class="dealer-clip">
+          <div class="frame">
+            <video controls playsinline preload="metadata" aria-label="Toyota Tacoma at Dalton Toyota National City">
+              <source src="dealer-clip.mp4" type="video/mp4">
+            </video>
+          </div>
+          <figcaption>A Toyota Tacoma on the lot at Dalton Toyota National City.</figcaption>
+        </figure>
       </section>
 
       <!-- §03 How Tacoma lease deals work at Dalton Toyota -->
@@ -1514,12 +1517,7 @@
         <div class="section-num"><span>04</span><span>The fine print</span></div>
         <h2 class="section-h">What a lease covers, <em>and what it doesn't</em>.</h2>
         <p class="lede">Most lease disappointment comes from the fine print nobody walks you through. We do it before you sign, not after you turn the truck in. Here's the plain-English version of what lives inside a Tacoma lease.</p>
-        <figure class="section-image" style="margin:32px 0 28px;position:relative;">
-          <div class="frame" style="aspect-ratio:auto;border:none;background:transparent;max-height:60vh;overflow:hidden;border-radius:12px;">
-            <img src="96.webp" width="1600" height="900" alt="A Toyota Tacoma towing a boat, showing the truck set up for weekend hauling." loading="lazy" decoding="async" style="width:100%;height:56vh;display:block;object-fit:cover;object-position:center 45%;">
-          </div>
-          <figcaption style="margin-top:10px;font-size:13px;line-height:1.5;color:var(--muted);text-align:left;max-width:70ch;">Towing is where a Tacoma earns its keep. Payload and tow ratings shift by configuration, so we check them against your VIN.</figcaption>
-        </figure>
+        
 
 
         <ul class="bullets">
@@ -1603,8 +1601,6 @@
           </div>
           <figcaption style="margin-top:10px;font-size:13px;line-height:1.5;color:var(--muted);text-align:left;max-width:70ch;">The TRD grades are built for the trail. Most lease customers never take one this far, but the underlying truck is the same.</figcaption>
         </figure>
-
-
         <h3>We run the VIN before we hand over the keys</h3>
         <p>The Insurance Institute for Highway Safety publishes Tacoma crash-test results at <a href="https://www.iihs.org" rel="noopener" target="_blank">iihs.org</a>, and the National Highway Traffic Safety Administration posts federal star ratings and any open recalls at <a href="https://www.nhtsa.gov" rel="noopener" target="_blank">nhtsa.gov</a>. Before we hand a leased Tacoma to a customer, our service team runs the VIN through NHTSA's recall lookup to confirm there are no open campaigns, that's a five-minute check that protects you for the entire term.</p>
 
