@@ -36,6 +36,10 @@
 <!-- Preload hero image for faster LCP -->
 <link rel="preload" as="image" href="tacoma-dalton-lot-hero.webp" fetchpriority="high" />
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+
 <!-- JSON-LD: Article + AutoDealer + Vehicle Products + FAQPage + BreadcrumbList -->
 <script type="application/ld+json">
 {
@@ -239,7 +243,7 @@
 
   :root {
     /* Toyota Dalton on-brand palette: white + Toyota red accent */
-    --red: #EB0A1E;        /* official Toyota red */
+    --red:#f41718;        /* official Toyota red */
     --red-deep: #C0000E;   /* darker red for links / hover */
     --red-ink: #8A0511;    /* deepest red */
     --red-soft: #fdeaec;   /* soft red tint for fills */
@@ -252,8 +256,8 @@
     --paper-2: #f6f6f6;
     --white: #ffffff;
 
-    --display: "ToyotaType-Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --sans: "ToyotaType-Book", "ToyotaType-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --display:"Toyota Brand", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --sans:"Toyota Brand", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
     --radius-xs: 4px;
     --radius-sm: 8px;
@@ -349,7 +353,7 @@
 
   .hero-meta {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 28px;
     border-top: 1px solid var(--ink);
     border-bottom: 1px solid var(--rule);
@@ -1303,8 +1307,22 @@
 .hero-cta .arrow{transition:transform .2s ease}
 .hero-cta a:hover .arrow{transform:translateX(3px)}
 
+/* Gutter rail cards (July design) */
+.rail-action{display:block;text-decoration:none;color:#fff;background:#a50d11;border-radius:var(--radius-md,14px);padding:20px;margin-bottom:16px;transition:background .15s ease}
+.rail-action:hover{background:#8a0a0d}
+.rail-action .lbl{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.8);display:block;margin-bottom:8px}
+.rail-action strong{font-family:var(--display);font-size:21px;font-weight:600;line-height:1.2;color:#fff;display:block}
+.rail-action .sub{font-size:13px;line-height:1.5;color:rgba(255,255,255,.85);display:block;margin-top:8px}
+.rail-action .rail-action__cta{display:inline-block;margin-top:14px;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#fff}
+.rail-card{border:1px solid var(--rule);border-radius:var(--radius-md,14px);background:var(--white,#fff);padding:18px;margin-bottom:16px}
+.rail-card .lbl{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:8px}
+.rail-card strong{font-family:var(--display);font-size:18px;font-weight:600;line-height:1.2;color:var(--ink);display:block}
+.rail-card .sub{font-size:13px;line-height:1.5;color:var(--muted);display:block;margin-top:4px}
+.rail-card .rail-link{display:inline-block;margin-top:12px;font-size:13px;font-weight:600;color:var(--red);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s ease}
+.rail-card .rail-link:hover{border-bottom-color:var(--red)}
+
 /* Dealer clip (July .dealer-clip pattern: vertical 9:16 phone video) */
-.dealer-clip{margin:8px auto 28px;max-width:260px}
+.dealer-clip{margin:8px auto 28px;max-width:340px}
 .dealer-clip .frame{overflow:hidden;border-radius:14px;border:1px solid var(--rule);background:#0e1216;aspect-ratio:9/16;box-shadow:0 2px 4px rgba(20,18,16,.06),0 14px 30px rgba(20,18,16,.10)}
 .dealer-clip video{display:block;width:100%;height:100%;object-fit:cover}
 .dealer-clip figcaption{margin-top:10px;font-size:13px;line-height:1.5;color:var(--muted);text-align:center}
@@ -1351,7 +1369,6 @@
     <div class="hero-meta">
       <div class="item"><div class="lbl">Address</div><div class="val">2400 National City Blvd<small>National City, CA 91950</small></div></div>
       <div class="item"><div class="lbl">Sales Hours</div><div class="val"><a class="tel" href="https://www.toyotadalton.com/hours.aspx" rel="noopener" target="_blank">Mon-Sat 8-8</a><small>Sun 10-6</small></div></div>
-      <div class="item"><div class="lbl">Sales</div><div class="val"><a class="tel" href="tel:+16194745573">619-474-5573</a><small>On the Mile of Cars</small></div></div>
       <div class="item"><div class="lbl">Reviews</div><div class="val"><a class="tel" href="https://www.google.com/search?q=dalton+toyota+national+city&amp;sca_esv=51707b364e030c74&amp;ei=cCsyarL2GKvI1e8P8rfikQE&amp;oq=dalton+toyota+&amp;gs_lp=Egxnd3Mtd2l6LXNlcnA&amp;sclient=gws-wiz-serp#lrd=0x80d95214bb1b2def:0x1f768b06c3c86578,1,,,," rel="noopener" target="_blank">4.6 ★ · 6,000+</a><small>Google · Dalton Toyota</small></div></div>
     </div>
 
@@ -1429,7 +1446,7 @@
           Lease math only works if we can answer the towing, payload, and mileage questions honestly, instead of reading them off a window sticker.
         </blockquote>
 
-        <p style="font-size:12px; color:var(--muted); letter-spacing:0.02em; line-height:1.6; border-top:1px solid var(--rule-soft); padding-top:18px; margin-top:24px;"><strong style="color:var(--ink-soft); letter-spacing:0.1em; text-transform:uppercase; font-size:10px;">Note ·</strong> Toyota's lease programs change month to month; the advertised payment you saw last month may not exist today. Confirm this month's Tacoma offer at toyotadalton.com or call <a class="tel" href="tel:+16194745573">619-474-5573</a> for the current structure on a specific build.</p>
+        <p style="font-size:12px; color:var(--muted); letter-spacing:0.02em; line-height:1.6; border-top:1px solid var(--rule-soft); padding-top:18px; margin-top:24px;"><strong style="color:var(--ink-soft); letter-spacing:0.1em; text-transform:uppercase; font-size:10px;">Note ·</strong> Toyota's lease programs change month to month; the advertised payment you saw last month may not exist today. Confirm this month's Tacoma offer at toyotadalton.com for the current structure on a specific build.</p>
       </section>
 
       <!-- §02 What you're actually leasing: the 2025-2026 Tacoma -->
@@ -1506,7 +1523,7 @@
           <li><strong>Trade-in equity</strong>: value in your current vehicle can reduce your cost to start</li>
         </ul>
 
-        <p>Toyota's lease programs change month to month, the advertised payment you saw in June may not exist in August. Residuals and incentives reset at a national cadence. You should confirm the current Tacoma offer before you drive over. You can see live deals at <a href="https://www.toyotadalton.com" rel="noopener" target="_blank">toyotadalton.com</a> or call our sales team at <a class="tel" href="tel:+16194745573">(619) 474-5573</a>.</p>
+        <p>Toyota's lease programs change month to month, the advertised payment you saw in June may not exist in August. Residuals and incentives reset at a national cadence. You should confirm the current Tacoma offer before you drive over. You can see live deals at <a href="https://www.toyotadalton.com" rel="noopener" target="_blank">toyotadalton.com</a>.</p>
 
         <p>One more thing to keep in mind. Many people estimate their annual mileage at the low end to make the payment look good, but they pay for it at lease-end. Excess-mileage charges add up fast, and they're not negotiable once the truck has to be returned. We'd rather quote you a 15,000-mile-a-year lease that costs a few dollars more per month than hand you a cheap 10,000-mile headline you'll blow past by spring.</p>
 
@@ -1547,11 +1564,10 @@
         <p class="lede no-cap">Toyota's lease programs reset monthly, so the smart move is to confirm the current Tacoma structure before you drive over. Tell us your target payment and your real miles. Bring your trade in and we'll line up a lease, or a finance deal, that fits.</p>
         <div class="actions">
           <a class="btn primary" href="https://www.toyotadalton.com">See current Tacoma offers <span class="arrow">→</span></a>
-          <a class="btn ghost" href="tel:+16194745573">Call sales · 619-474-5573</a>
+          <a class="btn ghost" href="https://www.toyotadalton.com/contactus.aspx">Contact sales</a>
         </div>
         <div class="meta">
           <div class="meta-item"><span class="k">Address</span><span class="v">2400 National City Blvd, National City CA</span></div>
-          <div class="meta-item"><span class="k">Sales</span><span class="v"><a class="tel" href="tel:+16194745573">619-474-5573</a></span></div>
           <div class="meta-item"><span class="k">Sales Hours</span><span class="v">Mon-Sat 8-8 · Sun 10-6</span></div>
           <div class="meta-item"><span class="k">Online</span><span class="v">toyotadalton.com</span></div>
         </div>
@@ -1616,8 +1632,8 @@
         <p>When your Tacoma comes in for service, our techs follow Toyota's published maintenance schedule and tell you what is due versus what can wait, which keeps a leased truck in warranty-correct, return-ready shape from day one. Service hours are Mon–Fri 7:00 AM – 6:00 PM and Sat 8:00 AM – 5:00 PM (closed Sunday); our parts counter keeps the same weekday and Saturday hours.</p>
 
         <ul class="bullets">
-          <li><strong>Sales:</strong> <a class="tel" href="tel:+16194745573">619-474-5573</a></li>
-          <li><strong>Service &amp; Parts:</strong> <a class="tel" href="tel:+16194745573">619-474-5573</a></li>
+          <li><strong>Sales:</strong> <a class="tel" href="https://www.toyotadalton.com/contactus.aspx" rel="noopener" target="_blank">Contact online</a></li>
+          <li><strong>Service &amp; Parts:</strong> <a class="tel" href="https://www.toyotadalton.com/contactus.aspx" rel="noopener" target="_blank">Contact online</a></li>
           <li><strong>Online:</strong> <a href="https://www.toyotadalton.com" rel="noopener" target="_blank">toyotadalton.com</a></li>
         </ul>
       </section>
@@ -1660,34 +1676,28 @@
         </ul>
         <p style="font-size:13px; margin-top:-8px;"><a href="https://www.toyotadalton.com/hours.aspx" rel="noopener" target="_blank">View all hours at toyotadalton.com/hours →</a></p>
 
-        <p>Ready when you are? <strong>Start at <a href="https://www.toyotadalton.com" rel="noopener" target="_blank">toyotadalton.com</a></strong> to see this month's Tacoma offers, or call Sales at <a class="tel" href="tel:+16194745573"><strong>619-474-5573</strong></a>.</p>
+        <p>Ready when you are? <strong>Start at <a href="https://www.toyotadalton.com" rel="noopener" target="_blank">toyotadalton.com</a></strong> to see this month's Tacoma offers.</p>
       </section>
     </div>
 
     <!-- Right gutter -->
-    <aside class="gutter" aria-label="Trust signals">
-      <div class="chip">
-        <div class="lbl">Google rating</div>
-        <a class="tel" href="https://www.google.com/search?q=dalton+toyota+national+city&amp;sca_esv=51707b364e030c74&amp;ei=cCsyarL2GKvI1e8P8rfikQE&amp;oq=dalton+toyota+&amp;gs_lp=Egxnd3Mtd2l6LXNlcnA&amp;sclient=gws-wiz-serp#lrd=0x80d95214bb1b2def:0x1f768b06c3c86578,1,,,," rel="noopener" target="_blank">
-          <div class="stars">★★★★★</div>
-          <strong style="font-size:28px;">4.6</strong>
-        </a>
-        <div class="sub">Across 6,000+ customer reviews</div>
+    <aside class="gutter" aria-label="Shop &amp; contact">
+      <a class="rail-action" href="https://www.toyotadalton.com/searchnew.aspx?ModelAndTrim=Tacoma">
+        <span class="lbl">Live prices &amp; stock</span>
+        <strong>See Tacoma offers</strong>
+        <span class="sub">Real prices on what's on the lot now</span>
+        <span class="rail-action__cta">View inventory &rarr;</span>
+      </a>
+      <div class="rail-card">
+        <span class="lbl">Finance &amp; offers</span>
+        <strong>Build a payment</strong>
+        <span class="sub">Lease &amp; finance options that fit</span>
+        <a class="rail-link" href="https://www.toyotadalton.com/finance.aspx">Explore financing &rarr;</a>
       </div>
-      <div class="chip">
-        <div class="lbl">Call sales</div>
-        <a class="tel" href="tel:+16194745573"><strong style="font-family:var(--display); font-size:22px;">619-474-5573</strong></a>
-        <div class="sub">See this month's Tacoma lease &amp; finance offers</div>
-      </div>
-      <div class="chip">
-        <div class="lbl">Typical lease term</div>
-        <strong style="font-size:18px; line-height:1.2;">24–39 months</strong>
-        <div class="sub">10k, 12k, or 15k miles a year · sized to how you drive</div>
-      </div>
-      <div class="chip">
-        <div class="lbl">Max towing</div>
-        <strong style="font-size:22px; line-height:1.2;">Up to 6,500 lbs</strong>
-        <div class="sub">Properly equipped · bring us the actual trailer weight</div>
+      <div class="rail-card">
+        <span class="lbl">Google rating</span>
+        <strong>4.6 &#9733;</strong>
+        <span class="sub">From &#8776;6,000 reviews</span>
       </div>
     </aside>
   </div>
@@ -1717,7 +1727,7 @@
         <h5>Hours &amp; contact</h5>
         <p><strong>Sales</strong> Mon-Sat 8 AM-8 PM<br><strong>Sunday</strong> 10 AM-6 PM</p>
         <p><strong>Service</strong> Mon-Fri 7 AM-6 PM · Sat 8 AM-5 PM<br><a class="tel" href="https://www.toyotadalton.com/hours.aspx" rel="noopener" target="_blank">View all hours →</a></p>
-        <p><strong>Sales</strong> <a class="tel" href="tel:+16194745573">619-474-5573</a><br><strong>Online</strong> <a href="https://www.toyotadalton.com" rel="noopener" target="_blank">toyotadalton.com</a></p>
+        <p><strong>Online</strong> <a href="https://www.toyotadalton.com" rel="noopener" target="_blank">toyotadalton.com</a></p>
         <p>2400 National City Blvd, National City, CA 91950.</p>
       </div>
     </div>
@@ -1826,9 +1836,9 @@
           <div style="font-size:12px; color:var(--muted); margin-top:10px; letter-spacing:0.04em;">Dalton Toyota National City · 2400 National City Blvd, National City, CA 91950</div>
         </div>
 
-        <p style="font-size:15px; color:var(--ink-soft); max-width:660px;">2025–2026 Tacoma engine, towing, and feature details described from Toyota's published specifications at toyota.com. Fuel economy cross-checked against the EPA's figures at fueleconomy.gov, and crash-test ratings verified at nhtsa.gov and iihs.org. Lease residuals and money factors reset monthly through Toyota Financial Services, and so do incentives and should be re-verified before any deal is signed. For this month's Tacoma lease structure, call Sales at <a class="tel" href="tel:+16194745573"><strong>619-474-5573</strong></a>.</p>
+        <p style="font-size:15px; color:var(--ink-soft); max-width:660px;">2025–2026 Tacoma engine, towing, and feature details described from Toyota's published specifications at toyota.com. Fuel economy cross-checked against the EPA's figures at fueleconomy.gov, and crash-test ratings verified at nhtsa.gov and iihs.org. Lease residuals and money factors reset monthly through Toyota Financial Services, and so do incentives and should be re-verified before any deal is signed. For this month's Tacoma lease structure, see toyotadalton.com.</p>
 
-        <p style="font-size:15px; color:var(--ink-soft); max-width:660px;"><em>If a question about leasing a Toyota Tacoma at Dalton Toyota National City is not answered here, call <a class="tel" href="tel:+16194745573">619-474-5573</a> and ask for a sales or finance advisor, or see this month's live Tacoma offers at <a href="https://www.toyotadalton.com" rel="noopener" target="_blank">toyotadalton.com</a>.</em></p>
+        <p style="font-size:15px; color:var(--ink-soft); max-width:660px;"><em>If a question about leasing a Toyota Tacoma at Dalton Toyota National City is not answered here, contact us and ask for a sales or finance advisor, or see this month's live Tacoma offers at <a href="https://www.toyotadalton.com" rel="noopener" target="_blank">toyotadalton.com</a>.</em></p>
 
         <ul class="ext">
           <li><a href="https://www.toyota.com/tacoma/" rel="noopener" target="_blank">Toyota USA · 2025 Tacoma specifications, i-FORCE and i-FORCE MAX powertrains, trims, towing, and warranty</a></li>
@@ -1849,10 +1859,10 @@
 <section class="closing-cta">
   <div class="wrap">
     <h2>See this month's <em>Tacoma offers</em>.</h2>
-    <p>Tacoma lease deals move fast, and the best terms don't sit around. See current offers at toyotadalton.com, call 619-474-5573, or visit us at 2400 National City Blvd on the Mile of Cars. Let's find the Tacoma, and the payment, that's ready for your next adventure.</p>
+    <p>Tacoma lease deals move fast, and the best terms don't sit around. See current offers at toyotadalton.com or visit us at 2400 National City Blvd on the Mile of Cars. Let's find the Tacoma, and the payment, that's ready for your next adventure.</p>
     <div class="actions">
       <a class="btn primary" href="https://www.toyotadalton.com">See current Tacoma offers <span class="arrow">→</span></a>
-      <a class="btn ghost" href="tel:+16194745573">Call sales · 619-474-5573</a>
+      <a class="btn ghost" href="https://www.toyotadalton.com/contactus.aspx">Contact sales</a>
       <a class="btn ghost" href="https://www.google.com/maps/dir//Dalton+Toyota+National+City,+2400+National+City+Blvd,+National+City,+CA+91950/@32.66124,-117.102285,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x80d95214bb1b2def:0x1f768b06c3c86578!2m2!1d-117.1017021!2d32.661234!3e0?hl=en&amp;entry=ttu&amp;g_ep=EgoyMDI2MDYxMy4wIKXMDSoASAFQAw%3D%3D" rel="noopener" target="_blank">Get Directions</a>
     </div>
   </div>
