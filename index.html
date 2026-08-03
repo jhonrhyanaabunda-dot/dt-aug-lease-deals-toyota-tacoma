@@ -953,7 +953,7 @@
   }
   .trust-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 0;
     margin-top: 48px;
     padding-top: 40px;
@@ -1350,9 +1350,9 @@
   .spec-strip.centered .num{text-align:center}
   .spec-strip.centered .lbl{justify-content:center;text-align:center}
 
-  /* Center the dark trust-grid stats (IMG2) */
-  .trust-grid .item{align-items:center;text-align:center}
-  .trust-grid .item .lbl{text-align:center;justify-content:center}
+  /* Left-align the dark trust-grid stats (match July band) */
+  .trust-grid .item{align-items:flex-start;text-align:left}
+  .trust-grid .item .lbl{text-align:left;justify-content:flex-start}
   /* Byline centered text already set inline; keep the link centered too */
   .author-credit[style*="text-align:center"] a{display:inline}
 
