@@ -1326,8 +1326,8 @@
 
 /* Dealer clip (July .dealer-clip pattern: vertical 9:16 phone video) */
 .dealer-clip{margin:8px auto 28px;max-width:460px}
-.dealer-clip .frame{overflow:hidden;border-radius:14px;border:1px solid var(--rule);background:#0e1216;aspect-ratio:9/16;box-shadow:0 2px 4px rgba(20,18,16,.06),0 14px 30px rgba(20,18,16,.10)}
-.dealer-clip video{display:block;width:100%;height:100%;object-fit:cover}
+.dealer-clip .frame{position:relative;overflow:hidden;border-radius:14px;border:1px solid var(--rule);background:#0e1216;aspect-ratio:9/16;box-shadow:0 2px 4px rgba(20,18,16,.06),0 14px 30px rgba(20,18,16,.10)}
+.dealer-clip video{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover}
 .dealer-clip figcaption{margin-top:10px;font-size:13px;line-height:1.5;color:var(--muted);text-align:center}
 @media (max-width:640px){.dealer-clip{max-width:100%}}
 
@@ -1492,7 +1492,8 @@
           <li>Prefer staying inside factory warranty for the life of the term</li>
           <li>Use the truck for work or recreation but don't need to own it outright</li>
         </ul>
-        <p>If you tend to keep trucks for ten-plus years, drive heavy mileage, or want to build equity toward outright ownership, financing usually serves you better. When the fourth-generation Tacoma started landing on our lot, our sales team spent the better part of a week walking every cab-and-bed combination, from SR to TRD Pro, before we let a customer near a key, because lease math only works if we can answer the towing, payload, and mileage questions honestly instead of reading them off a window sticker.</p>
+        <p>If you tend to keep trucks for ten-plus years, drive heavy mileage, or want to build equity toward outright ownership, financing usually serves you better.</p>
+        <p>When the fourth-generation Tacoma started landing on our lot, our sales team spent the better part of a week walking every cab-and-bed combination, from SR to TRD Pro, before we let a customer near a key, because lease math only works if we can answer the towing, payload, and mileage questions honestly instead of reading them off a window sticker.</p>
 
         <blockquote class="pull">
           Lease math only works if we can answer the towing, payload, and mileage questions honestly, instead of reading them off a window sticker.
@@ -1581,7 +1582,7 @@
 
         <figure class="dealer-clip">
           <div class="frame">
-            <video controls playsinline preload="metadata" aria-label="Toyota Tacoma at Dalton Toyota National City">
+            <video controls playsinline preload="metadata" poster="clip-poster.jpg" aria-label="Toyota Tacoma at Dalton Toyota National City">
               <source src="dealer-clip.mp4" type="video/mp4">
             </video>
           </div>
