@@ -965,17 +965,14 @@
   .trust-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0;
+    gap: 24px 40px;
     margin-top: 48px;
     padding-top: 40px;
     border-top: 1px solid rgba(255,255,255,.15);
   }
   .trust-grid .item {
-    padding: 8px 28px 8px 0;
-    border-right: 1px solid rgba(255,255,255,.12);
+    padding: 8px 0 0;
   }
-  .trust-grid .item:last-child { border-right: none; }
-  .trust-grid .item:not(:first-child) { padding-left: 28px; }
   .trust-grid .item .num { font-family: var(--display); font-size: 56px; font-weight: 500; line-height: 1; color: var(--white); letter-spacing: -0.02em; font-feature-settings: "lnum"; }
   .trust-grid .item .num small { font-size: 22px; color: #ff8a93; }
   .trust-grid .item .lbl { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,.6); margin-top: 16px; line-height: 1.55; }
@@ -1160,13 +1157,9 @@
     .spec-strip.stats { margin-left: -48px; margin-right: 0; }
     .trust-grid {
       grid-template-columns: repeat(2, 1fr);
-      gap: 0;
+      gap: 32px 40px;
     }
-    .trust-grid .item { padding: 24px 24px 24px 0 !important; border-right: 1px solid rgba(255,255,255,.12); border-bottom: 1px solid rgba(255,255,255,.12); }
-    .trust-grid .item:not(:first-child) { padding-left: 0 !important; }
-    .trust-grid .item:nth-child(2) { padding-left: 24px !important; border-right: none; }
-    .trust-grid .item:nth-child(3) { padding-left: 0 !important; border-bottom: none; }
-    .trust-grid .item:nth-child(4) { padding-left: 24px !important; border-right: none; border-bottom: none; }
+    .trust-grid .item { padding: 8px 0 0 !important; }
     .findlay-extras { gap: 36px; }
     .cross-table { overflow-x: auto; }
     .cross-table table { min-width: 720px; }
@@ -1189,11 +1182,8 @@
     .findlay-band { padding: 48px 0 40px; }
     .findlay-band h2 { font-size: 32px; }
     .findlay-band .band-deck { font-size: 17px; }
-    .trust-grid { grid-template-columns: 1fr 1fr; padding-top: 36px; margin-top: 44px; }
-    .trust-grid .item { padding: 20px 16px 20px 0 !important; }
-    .trust-grid .item:nth-child(2) { padding-left: 16px !important; }
-    .trust-grid .item:nth-child(3) { padding-left: 0 !important; padding-top: 24px !important; border-top: 1px solid rgba(255,255,255,.12); }
-    .trust-grid .item:nth-child(4) { padding-left: 16px !important; padding-top: 24px !important; border-top: 1px solid rgba(255,255,255,.12); }
+    .trust-grid { grid-template-columns: 1fr 1fr; gap: 28px 24px; padding-top: 36px; margin-top: 44px; }
+    .trust-grid .item { padding: 8px 0 0 !important; }
     .trust-grid .item .num { font-size: 40px; }
     .spec-strip { grid-template-columns: 1fr 1fr; }
     .spec-strip .item { border-right: none; border-bottom: 1px solid var(--rule); padding: 24px 16px; }
@@ -1339,7 +1329,7 @@
 .dealer-clip{margin:8px auto 28px;max-width:460px}
 .dealer-clip .frame{position:relative;overflow:hidden;border-radius:14px;border:1px solid var(--rule);background:#0e1216;aspect-ratio:9/16;box-shadow:0 2px 4px rgba(20,18,16,.06),0 14px 30px rgba(20,18,16,.10)}
 .dealer-clip video{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover}
-.dealer-clip figcaption{margin-top:10px;font-size:13px;line-height:1.5;color:var(--muted);text-align:center}
+figcaption{margin-top:12px;font-size:13px;line-height:1.55;color:var(--muted);max-width:70ch}figcaption b{color:var(--ink-soft);font-weight:600}.dealer-clip figcaption{text-align:center;margin-left:auto;margin-right:auto}
 @media (max-width:640px){.dealer-clip{max-width:100%}}
 
   /* July parity: deck spans the wrap at July's computed metrics (17px/1.7, no cap) */
@@ -1450,7 +1440,7 @@
          fetchpriority="high"
          width="1632"
          height="1080" />
-    <figcaption class="visually-hidden">A blue Toyota Tacoma TRD Sport on a mountain trail, available to lease or finance at Dalton Toyota National City, 2400 National City Blvd on the National City Mile of Cars.</figcaption>
+    <figcaption class="visually-hidden"><b>A blue Toyota Tacoma TRD Sport on a mountain trail.</b> Available to lease or finance at Dalton Toyota National City, 2400 National City Blvd on the National City Mile of Cars.</figcaption>
   </figure>
 </header>
 <!-- Breadcrumb bar (matching the July articles) -->
@@ -1603,7 +1593,7 @@
               <source src="dealer-clip.mp4" type="video/mp4">
             </video>
           </div>
-          <figcaption>A Toyota Tacoma on the lot at Dalton Toyota National City.</figcaption>
+          <figcaption><b>A Toyota Tacoma on the lot.</b> At Dalton Toyota National City.</figcaption>
         </figure>
       </section>
 
@@ -1724,7 +1714,7 @@
           <div class="frame" style="aspect-ratio:auto;border:none;background:transparent;max-height:60vh;overflow:hidden;border-radius:12px;">
             <img src="body-tacoma-trd.webp" width="1280" height="799" alt="A Toyota Tacoma TRD on a rocky off-road trail, showing its ground clearance and all-terrain stance." loading="lazy" decoding="async" style="width:100%;height:56vh;display:block;object-fit:cover;object-position:center 45%;">
           </div>
-          <figcaption style="margin-top:10px;font-size:13px;line-height:1.5;color:var(--muted);text-align:left;max-width:70ch;">The TRD grades are built for the trail. Most lease customers never take one this far, but the underlying truck is the same.</figcaption>
+          <figcaption style="margin-top:10px;font-size:13px;line-height:1.5;color:var(--muted);text-align:left;max-width:70ch;"><b>The TRD grades are built for the trail.</b> Most lease customers never take one this far, but the underlying truck is the same.</figcaption>
         </figure>
         <h3>We run the VIN before we hand over the keys</h3>
         <p>The Insurance Institute for Highway Safety publishes Tacoma crash-test results at <a href="https://www.iihs.org" rel="noopener" target="_blank">iihs.org</a>, and the National Highway Traffic Safety Administration posts federal star ratings and any open recalls at <a href="https://www.nhtsa.gov" rel="noopener" target="_blank">nhtsa.gov</a>.</p>
